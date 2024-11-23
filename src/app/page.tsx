@@ -5,13 +5,26 @@ import '../styles/login.css'
 import Link from 'next/link'
 
 const HomePage = () => {
-  const [login, setlogin] = useState(true)
+  const [login, setlogin] = useState(true);
+  const [fontLoaded, setFontLoaded] = useState(false);
+
   useEffect(() => {
     setInterval(() => {
       setlogin(false)
     }, 3000)
   }, []);
-  
+
+  useEffect(() => {
+    document.fonts.load('1em Cookie').then(() => setFontLoaded(true));
+  }, []);
+
+  if (!fontLoaded) {
+    return (
+      <div className="bg-specialGreen h-screen w-screen flex justify-center items-center">
+        <img src="images/logo.png" className='rounded-full'/>
+      </div>
+    );
+  }
   if (login) {
     return (
       <div className='bg-specialGreen h-screen w-screen text-white flex justify-center'>
