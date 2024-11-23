@@ -1,0 +1,14 @@
+@keyframes start_animation {
+  from {
+    transform: translateY(50%);
+  }
+  to {
+    transform: translateY(50px);
+  }
+}
+
+
+.start_login {
+  animation-name: start_animation;
+  animation-duration: 3s;
+}
