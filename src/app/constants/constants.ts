@@ -148,3 +148,31 @@ export const chats = [
   "Alimentation",
   "Find a friend",
 ];
+
+export const medicine = [
+  {
+    name: "Paclitaxel",
+    time: "7:00 am",
+    color: "bg-red-600",
+  },
+  {
+    name: "Doxorrubicina",
+    time: "12:00 pm",
+    color: "bg-green-600",
+  },
+  {
+    name: "Capecitabina",
+    time: "1:00 pm",
+    color: "bg-blue-600",
+  },
+  {
+    name: "Paclitaxel",
+    time: "5:00 pm",
+    color: "bg-red-600",
+  },
+  {
+    name: "Capecitabina",
+    time: "8:00 pm",
+    color: "bg-green-600",
+  },
+];
