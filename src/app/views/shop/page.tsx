@@ -9,7 +9,7 @@ const Shop = () => {
         <img src="/icons/search.png" className="ml-2 size-5" />
         <input />
       </fieldset>
-      <div className="grid h-full w-full grid-cols-2 gap-2 overflow-y-scroll bg-white p-2">
+      <div className="mb-14 grid h-full w-full grid-cols-2 gap-2 overflow-y-scroll bg-white p-2">
         {items.map((i) => (
           <Item_card name={i.name} image={i.image} price={i.price} />
         ))}

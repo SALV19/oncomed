@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { FC } from "react";
 
 interface Props {
@@ -8,13 +9,16 @@ interface Props {
 
 const Item_card: FC<Props> = ({ name, image, price }) => {
   return (
-    <div className="flex h-[15rem] w-full flex-col items-center justify-center rounded-md shadow-md">
+    <Link
+      className="flex h-[15rem] w-full flex-col items-center justify-center rounded-md shadow-md"
+      href={`/views/shop/shop_item?name=${name}&image=${image}&price=${price}`}
+    >
       <img src={image} className="h-full w-full" />
-      <div className="flex justify-between p-2">
-        <h1>{name}</h1>
-        <p>{price}</p>
+      <div className="flex flex-col p-2">
+        <h1>{name + " "}</h1>
+        <p>${price}</p>
       </div>
-    </div>
+    </Link>
   );
 };
 
