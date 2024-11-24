@@ -107,7 +107,7 @@ const PaymentForm = () => {
         />
         <button
           onClick={handleSubmit}
-          className="rounded-md bg-specialGreen p-1 px-3 font-cookie text-2xl text-white"
+          className="rounded-md bg-specialGreen p-1 px-3 font-cookie text-2xl text-white hover:bg-[#066163]"
         >
           Submit
         </button>
