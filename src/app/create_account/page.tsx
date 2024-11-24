@@ -3,15 +3,19 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import { useRouter } from "next/navigation";
 
 const CreateAccount = () => {
+  const router = useRouter();
   const [state, setState] = useState<{
     name: string;
+    email: string;
     password: string;
     c_password: string;
     birth_date: string;
   }>({
     name: "",
+    email: "",
     password: "",
     c_password: "",
     birth_date: "",
@@ -22,6 +26,7 @@ const CreateAccount = () => {
 
     setState((prev) => ({ ...prev, [name]: value }));
   };
+
   const signIn = (e: any) => {
     e.preventDefault;
     if (
@@ -30,7 +35,7 @@ const CreateAccount = () => {
       state.password &&
       state.birth_date
     ) {
-      window.location.href = "/create_account/plans";
+      router.push("/create_account/plans");
     } else {
       alert("Error: Please complete the form before continue");
     }
@@ -50,6 +55,16 @@ const CreateAccount = () => {
             name="name"
             placeholder="John Doe"
             value={state.name}
+            onChange={handleInputChange}
+          />
+        </div>
+        <div className="flex flex-col">
+          <span>Email</span>
+          <input
+            type="text"
+            name="email"
+            placeholder="johnD@gmail.com"
+            value={state.email}
             onChange={handleInputChange}
           />
         </div>
@@ -83,12 +98,12 @@ const CreateAccount = () => {
             onChange={handleInputChange}
           />
         </div>
-        <button
+        <p
           onClick={(e) => signIn(e)}
           className="rounded-md bg-specialGreen p-2 px-4 font-cookie text-2xl text-white"
         >
           View plans
-        </button>
+        </p>
       </form>
     </div>
   );

@@ -1,3 +1,48 @@
+export const head_nav = [
+  {
+    name: "Health care",
+    link: "/views/extra/health",
+  },
+  {
+    name: "Associations",
+    link: "/views/extra/associations",
+  },
+  {
+    name: "Clases",
+    link: "/views/extra/clases",
+  },
+  {
+    name: "Diary",
+    link: "/views/extra/diary",
+  },
+  {
+    name: "History",
+    link: "/views/extra/history",
+  },
+];
+export const chat_nav = [
+  {
+    name: "Luis Enrique",
+    link: "/views/chat/conversation",
+  },
+  {
+    name: "Doctora Esperanza",
+    link: "/views/chat/conversation",
+  },
+  {
+    name: "Harry Dresden",
+    link: "/views/chat/conversation",
+  },
+  {
+    name: "John Perfect",
+    link: "/views/chat/conversation",
+  },
+  {
+    name: "Fletcher Arcturus",
+    link: "/views/chat/conversation",
+  },
+];
+
 export const doctors = [
   {
     doctor: "Oncologist",
@@ -75,17 +120,31 @@ export const donations = [
 export const plans = [
   {
     name: "Basic",
-    description: "This plan offers you many different things",
+    description:
+      "Free plan with: \n-Hospital Directory\n-Store\n-Offers and Deals\n-Notifications\nSupport Directory",
     cost: "Free",
   },
   {
     name: "Premium",
-    description: "This plan offers you many different things",
-    cost: "$12 dollars/month",
+    description:
+      "This pack includes all the basic features plus: Better Deals, and support groups and forums",
+    cost: "$100 pesos/month",
   },
   {
     name: "Delux",
-    description: "This plan offers you many different things",
+    description:
+      "Includes both plans functionalities as well as: Support Videos with tutorials, classes and audiobooks",
     cost: "$20 dollars/month",
   },
+];
+
+export const chats = [
+  "Dealing with a loss",
+  "Where to find treatment",
+  "Find support",
+  "Express yourself",
+  "Family problems",
+  "Advices",
+  "Alimentation",
+  "Find a friend",
 ];

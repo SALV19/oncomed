@@ -16,7 +16,7 @@ const Plan_cards: FC<Props> = ({ name, description, price }) => {
       <div className="flex w-full justify-end text-white">
         <Link
           href={name == "Basic" ? "/views/home" : "/pay"}
-          className="rounded-lg bg-specialGreen p-2 px-4"
+          className="relative bottom-5 right-5 rounded-lg bg-specialGreen p-2 px-4"
         >
           BUY
         </Link>
