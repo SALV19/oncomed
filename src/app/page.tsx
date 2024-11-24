@@ -1,8 +1,8 @@
-'use client'
+"use client";
 
-import React, { useEffect, useState } from 'react'
-import '../styles/login.css'
-import Link from 'next/link'
+import React, { useEffect, useState } from "react";
+import "../styles/login.css";
+import Link from "next/link";
 
 const HomePage = () => {
   const [login, setlogin] = useState(true);
@@ -10,49 +10,66 @@ const HomePage = () => {
 
   useEffect(() => {
     setInterval(() => {
-      setlogin(false)
-    }, 3000)
+      setlogin(false);
+    }, 3000);
   }, []);
 
   useEffect(() => {
-    document.fonts.load('1em Cookie').then(() => setFontLoaded(true));
+    document.fonts.load("1em Cookie").then(() => setFontLoaded(true));
   }, []);
 
   if (!fontLoaded) {
     return (
-      <div className="bg-specialGreen h-screen w-screen flex justify-center items-center">
-        <img src="images/logo.png" className='rounded-full'/>
+      <div className="flex h-screen w-screen items-center justify-center bg-specialGreen">
+        <img src="images/logo.png" className="rounded-full" />
       </div>
     );
   }
   if (login) {
     return (
-      <div className='bg-specialGreen h-screen w-screen text-white flex justify-center'>
-        <h1 className='text-7xl font-cookie start_login'>Onkomed</h1>
+      <div className="flex h-screen w-screen justify-center bg-specialGreen text-white">
+        <h1 className="start_login font-cookie text-7xl">Onkomed</h1>
       </div>
-    )
+    );
   }
   return (
     <div>
-      <div className='bg-specialGreen h-screen w-screen text-white flex justify-center items-center'>
-        <h1 className='text-7xl font-cookie top-[50px] absolute'>Onkomed</h1>
-        <aside className='w-10/12 h-2/3 bg-white rounded-md mt-24 text-black flex flex-col items-center justify-center'>
-          <h2 className='font-sans font-bold text-2xl my-4'>Log In</h2>
-          <fieldset className='w-10/12'>
-            <p className='mt-1'>Email</p>
-            <input placeholder='ex@mail.com' className='w-full h-8 p-2 border-2 border-gray-500 rounded-md mb-8'/>
+      <div className="flex h-screen w-screen items-center justify-center bg-specialGreen text-white">
+        <h1 className="absolute top-[50px] font-cookie text-7xl">Onkomed</h1>
+        <aside className="mt-24 flex h-2/3 w-10/12 flex-col items-center justify-center rounded-md bg-white text-black">
+          <h2 className="my-4 font-sans text-2xl font-bold">Log In</h2>
+          <fieldset className="w-10/12">
+            <p className="mt-1">Email</p>
+            <input
+              placeholder="ex@mail.com"
+              className="mb-8 h-8 w-full rounded-md border-2 border-gray-500 p-2"
+            />
             <p>Password</p>
-            <input type="password" placeholder='**********' className='w-full h-8 p-2 border-2 border-gray-500 rounded-md'/>
-            <div className='w-full flex justify-center'>
-              <Link className='w-3/5 my-10 p-2 bg-specialGreen rounded-md text-white text-center' href={'/views/home'}>Enter</Link>
+            <input
+              type="password"
+              placeholder="**********"
+              className="h-8 w-full rounded-md border-2 border-gray-500 p-2"
+            />
+            <div className="flex w-full justify-center">
+              <Link
+                className="my-10 w-3/5 rounded-md bg-specialGreen p-2 text-center text-white"
+                href={"/views/home"}
+              >
+                Enter
+              </Link>
             </div>
           </fieldset>
-          <hr className='w-full' />
-          <button className='mt-5 text-xl text-specialGreen'>Create account</button>
+          <hr className="w-full" />
+          <Link
+            className="mt-5 text-xl text-specialGreen"
+            href={"/create_account"}
+          >
+            Create account
+          </Link>
         </aside>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default HomePage
+export default HomePage;

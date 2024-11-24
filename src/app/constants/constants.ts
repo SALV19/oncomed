@@ -71,3 +71,21 @@ export const donations = [
     blood: "AB+",
   },
 ];
+
+export const plans = [
+  {
+    name: "Basic",
+    description: "This plan offers you many different things",
+    cost: "Free",
+  },
+  {
+    name: "Premium",
+    description: "This plan offers you many different things",
+    cost: "$12 dollars/month",
+  },
+  {
+    name: "Delux",
+    description: "This plan offers you many different things",
+    cost: "$20 dollars/month",
+  },
+];
