@@ -178,3 +178,27 @@ export const medicine = [
 ];
 
 export let diary_entry = { text: "" };
+
+export const videos_yg = [
+  {
+    url: "https://www.youtube.com/watch?v=1J8CRcoFekE&pp=ygUOdmlkZW9zIGRlIHlvZ2E%3D",
+  },
+  {
+    url: "https://www.youtube.com/watch?v=1J8CRcoFekE&pp=ygUOdmlkZW9zIGRlIHlvZ2E%3D",
+  },
+  {
+    url: "https://www.youtube.com/watch?v=1J8CRcoFekE&pp=ygUOdmlkZW9zIGRlIHlvZ2E%3D",
+  },
+];
+
+export const videos_nutrition = [
+  {
+    url: "https://www.youtube.com/watch?v=xyQY8a-ng6g",
+  },
+  {
+    url: "https://www.youtube.com/watch?v=xyQY8a-ng6g",
+  },
+  {
+    url: "https://www.youtube.com/watch?v=xyQY8a-ng6g",
+  },
+];
