@@ -1,8 +1,18 @@
+"use client";
+
+import Link from "next/link";
 import React from "react";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import { usePathname } from "next/navigation";
 
 const WithSS = () => {
+  const pathname = usePathname().replace("/withoutss", "");
+
   return (
     <div className="flex h-screen flex-col items-center justify-center gap-3 bg-specialGreen">
+      <Link href={pathname} className="absolute left-5 top-14 text-white">
+        <ArrowBackIosIcon />
+      </Link>
       <section className="flex items-center justify-center">
         <img
           className="h-24 w-24 object-contain"

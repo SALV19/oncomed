@@ -105,12 +105,12 @@ const PaymentForm = () => {
           name={state.name}
           focused={state.focus}
         />
-        <button
-          onClick={handleSubmit}
+        <Link
           className="rounded-md bg-specialGreen p-1 px-3 font-cookie text-2xl text-white hover:bg-[#066163]"
+          href={"/views/home"}
         >
           Submit
-        </button>
+        </Link>
       </form>
       <Link href="/create_account" className="absolute left-5 top-5 text-white">
         <ArrowBackIosIcon />

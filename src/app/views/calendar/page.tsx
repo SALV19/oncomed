@@ -16,12 +16,15 @@ const Calendar_page = () => {
       <h1 className="text-white">Medicines of the day: </h1>
       <section className="flex flex-col gap-2 overflow-y-scroll">
         {medicine.map((m, idx) => (
-          <div className={`w-full rounded-md p-2 ${m.color}`} key={idx}>
+          <div className={`w-full rounded-md bg-white p-2`} key={idx}>
             <h1>{m.name}</h1>
             <h2>{m.time}</h2>
           </div>
         ))}
       </section>
+      <div className="mt-5 flex h-12 w-12 items-center justify-center rounded-full bg-red-500 text-center text-5xl text-white">
+        +
+      </div>
     </div>
   );
 };
