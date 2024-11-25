@@ -176,3 +176,5 @@ export const medicine = [
     color: "bg-green-600",
   },
 ];
+
+export let diary_entry = { text: "" };
